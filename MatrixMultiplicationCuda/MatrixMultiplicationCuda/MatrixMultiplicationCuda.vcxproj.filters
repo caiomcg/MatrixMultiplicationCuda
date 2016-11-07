@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{dbc1fde6-dd5c-4be7-9173-f49810d1304b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ArgumentParser.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ArgumentParser.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
