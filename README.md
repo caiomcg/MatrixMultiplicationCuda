@@ -9,7 +9,7 @@ A simple Matrix Multiplication of nXn matrixes under the NVIDIA CUDA environment
 * Visual C++
 * NVIDIA CUDA
 
-## Test Environment ##
+## Build Environment ##
 
 * OS: Microsoft Windows 10 Home Single Language
 * IDE: Visual Studio Community 2015
