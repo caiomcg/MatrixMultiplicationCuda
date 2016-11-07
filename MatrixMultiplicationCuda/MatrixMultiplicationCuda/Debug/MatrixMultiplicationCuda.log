@@ -1,9 +1,35 @@
-﻿  Matrix.cpp
-c:\users\caiomcg\documents\matrixmultiplicationcuda\matrixmultiplicationcuda\matrixmultiplicationcuda\matrix.cpp(45): warning C4018: '<': signed/unsigned mismatch
-c:\users\caiomcg\documents\matrixmultiplicationcuda\matrixmultiplicationcuda\matrixmultiplicationcuda\matrix.cpp(46): warning C4018: '<': signed/unsigned mismatch
+﻿  Compiling CUDA source file kernel.cu...
+  
+  C:\Users\caiomcg\Documents\MatrixMultiplicationCuda\MatrixMultiplicationCuda\MatrixMultiplicationCuda>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2015 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /FS /Zi /RTC1 /MDd " -o Debug\kernel.cu.obj "C:\Users\caiomcg\Documents\MatrixMultiplicationCuda\MatrixMultiplicationCuda\MatrixMultiplicationCuda\kernel.cu" 
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(99): warning : invalid narrowing conversion from "unsigned int" to "int"
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(99): warning : invalid narrowing conversion from "unsigned int" to "int"
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(100): warning : invalid narrowing conversion from "unsigned int" to "int"
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(100): warning : invalid narrowing conversion from "unsigned int" to "int"
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(101): warning : invalid narrowing conversion from "unsigned int" to "int"
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(101): warning : invalid narrowing conversion from "unsigned int" to "int"
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(99): warning : invalid narrowing conversion from "unsigned int" to "int"
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(99): warning : invalid narrowing conversion from "unsigned int" to "int"
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(100): warning : invalid narrowing conversion from "unsigned int" to "int"
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(100): warning : invalid narrowing conversion from "unsigned int" to "int"
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(101): warning : invalid narrowing conversion from "unsigned int" to "int"
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(101): warning : invalid narrowing conversion from "unsigned int" to "int"
+CUDACOMPILE : nvcc warning : The 'compute_20', 'sm_20', and 'sm_21' architectures are deprecated, and may be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+  kernel.cu
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(62): warning C4018: '<': signed/unsigned mismatch
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(65): warning C4018: '<': signed/unsigned mismatch
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(74): warning C4018: '<': signed/unsigned mismatch
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(82): warning C4018: '<': signed/unsigned mismatch
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(99): warning C4838: conversion from 'unsigned int' to 'int' requires a narrowing conversion
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(100): warning C4838: conversion from 'unsigned int' to 'int' requires a narrowing conversion
+C:/Users/caiomcg/Documents/MatrixMultiplicationCuda/MatrixMultiplicationCuda/MatrixMultiplicationCuda/kernel.cu(101): warning C4838: conversion from 'unsigned int' to 'int' requires a narrowing conversion
   ArgumentParser.cpp
 c:\users\caiomcg\documents\matrixmultiplicationcuda\matrixmultiplicationcuda\matrixmultiplicationcuda\argumentparser.cpp(47): warning C4018: '<': signed/unsigned mismatch
 c:\users\caiomcg\documents\matrixmultiplicationcuda\matrixmultiplicationcuda\matrixmultiplicationcuda\argumentparser.cpp(48): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Compiling...
+  Matrix.cpp
+c:\users\caiomcg\documents\matrixmultiplicationcuda\matrixmultiplicationcuda\matrixmultiplicationcuda\matrix.cpp(45): warning C4018: '<': signed/unsigned mismatch
+c:\users\caiomcg\documents\matrixmultiplicationcuda\matrixmultiplicationcuda\matrixmultiplicationcuda\matrix.cpp(46): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
   MatrixMultiplicationCuda.vcxproj -> C:\Users\caiomcg\Documents\MatrixMultiplicationCuda\MatrixMultiplicationCuda\Debug\MatrixMultiplicationCuda.exe
   copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin\cudart*.dll" "C:\Users\caiomcg\Documents\MatrixMultiplicationCuda\MatrixMultiplicationCuda\Debug\"

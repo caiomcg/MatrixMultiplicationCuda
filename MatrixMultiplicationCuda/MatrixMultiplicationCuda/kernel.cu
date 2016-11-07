@@ -1,27 +1,43 @@
+#include "cuda_runtime.h" //CUDA.
+#include "device_launch_parameters.h" //CUDA.
 
-#include "cuda_runtime.h"
-#include "device_launch_parameters.h"
+#include <iostream> //C++ standard I/O.
+#include <exception> //C++ exceptions.
 
-#include <iostream>
-#include <exception>
+#include <Windows.h> //Windows header. 
 
-#include <Windows.h>
+#include "ArgumentParser.h" //Argument Parser.
+#include "Matrix.h" //Matrix Object.
 
-#include "ArgumentParser.h"
-#include "Matrix.h"
+#define THREAD_BLOCK_SIZE 3 //Default block size for matrix under the GPU.
 
-#define THREAD_BLOCK_SIZE 3
-
+/**
+ * @brief Code Usage.
+ */
 void usage(void) {
 	std::cout << "Usage: ./MatrixMultiplicationCuda [FILE] [FILE]" << std::endl;
 }
 
+/**
+ * @brief Matrix Struct used under the CUDA environment.
+ * 
+ * @param a First Matrix.
+ * @param b Second Matrix.
+ * @param c Resulting Matrix.
+ */
 typedef struct {
 	int* elements;
 	int width;
 	int height;
 } MatrixStruct;
 
+/**
+ * @brief The Multiplication that occurs under a CUDA thread.
+ * 
+ * @param a First Matrix.
+ * @param b Second Matrix.
+ * @param c Resulting Matrix.
+ */
 __global__ void multiplyMatrixesGPU(MatrixStruct a, MatrixStruct b, MatrixStruct c) {
 	int calc = 0;
 	int row = blockIdx.y * blockDim.y + threadIdx.y;
@@ -34,7 +50,14 @@ __global__ void multiplyMatrixesGPU(MatrixStruct a, MatrixStruct b, MatrixStruct
 	}
 	c.elements[row * c.width + col] = calc;
 }
-
+/**
+ * @brief Print 3x3 Matrixes.
+ * @details Print the matrixes[formatted].
+ * 
+ * @param a First Matrix.
+ * @param b Second Matrix.
+ * @param c Resulting Matrix.
+ */
 void print3x3(const Matrix* a, const Matrix* b, const Matrix* c) {
 	for (int i = 0; i < c->getWidth(); i++) {
 
@@ -65,6 +88,13 @@ void print3x3(const Matrix* a, const Matrix* b, const Matrix* c) {
 	}
 }
 
+/**
+ * @brief Prepare the matrix to be used under CUDA and calls the cuda kernel.
+ * 
+ * @param a First matrix.
+ * @param b Second Matrix.
+ * @param c Resulting Matrix.
+ */
 void multiplyMatrixes(const Matrix* a, const Matrix* b, Matrix* c) {
 	MatrixStruct gpu_a = { nullptr, a->getWidth(), a->getHeight() };
 	MatrixStruct gpu_b = { nullptr, b->getWidth(), b->getHeight() };
@@ -110,6 +140,14 @@ void multiplyMatrixes(const Matrix* a, const Matrix* b, Matrix* c) {
 	cudaFree(gpu_c.elements);
 }
 
+/**
+ * @brief The main function;
+ * 
+ * @param argc Amount of arguments passed by the command line.
+ * @param argv The arguments passed by the command line.
+ * 
+ * @return 0 if no problem occured.
+ */
 int main(int argc, char** argv) {
 	ArgumentParser* argParser = nullptr;
 	Matrix* firstMatrix		  = nullptr;
