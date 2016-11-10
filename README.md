@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/caiomcg/MatrixMultiplicationCuda/master/LICENSE)
 
-A simple Matrix Multiplication of nXn matrixes under the NVIDIA CUDA environment.
+Matrix Multiplication of nXn matrixes under the NVIDIA CUDA environment.
 
 ## Requirements ##
 
